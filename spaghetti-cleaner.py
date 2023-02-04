@@ -56,18 +56,10 @@ def parse_text(dir_name):
     # parse list
     list = text.split("Art.")
 
-
     # Save the dictionary as a TSV file
-    with open(f'{output_path}/index.tsv', 'w', newline='') as file:
-
-        # CSV (comma separated) -> TSV (tab separated)
-        writer = csv.writer(file, delimiter='\t')
-
-        # write header
-        writer.writerow(["text", "source"]) 
-
-        # data conversion
-        for row in list: writer.writerow([row, dir_name])
+    tsv = ""
+    for article in list: tsv += f"{dir_name}\tArt.{article}"
+    with open(f"{output_path}/index.tsv", "w") as f: f.write(tsv)
 
 
 def main():
@@ -98,3 +90,10 @@ def main():
 
 
 main()
+
+# to improve on
+# - culturali
+# - turismo
+# - norme di mareria ambientale
+# regolamento di esecuzione e di attuazione del nuovo codice della strada
+# - elimina gli abrogati
