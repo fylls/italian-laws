@@ -56,6 +56,7 @@ def parse_text(dir_name):
     with open(f"{output_path}/parsed.txt", "w") as f: f.write(text)
 
 
+
 def main():
     
     # status
@@ -89,10 +90,5 @@ def main():
         else: parse_text(dir_name)
 
 
-main()
 
-# to improve on
-# regolamento di esecuzione e di attuazione del nuovo codice della strada
-# - elimina gli abrogati
-# NORME AMBIENTALI PORCODDIO
-# esecuzione codice stradale
+main()
