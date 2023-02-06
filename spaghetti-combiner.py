@@ -1,22 +1,31 @@
 import os
 
-# get the names of all the directories
-dirs = os.listdir('./TXTs')
-
 # full index
-conplete_index = ""
+complete_index = ""
+
+# get the names of all the directories
+directories = os.listdir('./TXTs')
 
 # loop trough every directory
-for d in dirs:
+for directory in directories:
      
-    # find the TSV file for each legal text
-    with open(f"./TXTs/{d}/index.tsv", "r") as file:
+    # find the ultimate.txt file for each directory
+    with open(f"./TXTs/{directory}/ultimate.txt", "r") as file:
 
-        # turn TextIOWrapper to strinf
-        index = file.read()
+        # convert TextIOWrapper to string
+        text = file.read() + "\n"
 
-        # add all the indexes together
-        conplete_index += index
+        # split text into a list 
+        list = text.split("Art.")
+
+        # add list to TSV file
+        for article in list: 
+
+            # avoid adding it if the line is empty-ish
+            if len(article) > 2:
+
+                # add article to index
+                complete_index += f"{directory}\tArt.{article}"
 
 # save them in the root directory
-with open("./index.tsv", "w") as f: f.write(conplete_index)
+with open("./index.tsv", "w") as f: f.write(complete_index)
