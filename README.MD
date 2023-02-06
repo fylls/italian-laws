@@ -10,7 +10,7 @@ If you are a **computer**, please read `index.tsv`
 
 ![image](https://user-images.githubusercontent.com/55017307/216944897-2ec94c88-3051-40fe-a0ce-2af89caf9bb3.png)
 
-**image 1:** epitome of italian driven design
+**image 1:** epitome of italian-driven design
 
 </div>
 
@@ -26,7 +26,7 @@ $ pip install -r requirements.txt
 
 <br />
 
-**long (italian) way**
+**italian-driven design**
 
 ```bash
 $ conda create -n spaghetti
@@ -53,6 +53,3 @@ $ python3 spaghetti-scraper.py
 $ python3 spaghetti-parser.py
 $ python3 spaghetti-combiner.py
 ```
-
----
-
